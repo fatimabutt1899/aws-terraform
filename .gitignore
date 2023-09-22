@@ -1,0 +1,14 @@
+# Exclude local Terraform state files
+.terraform/
+
+# Exclude .tfstate and .tfstate.backup files
+*.tfstate
+*.tfstate.backup
+
+# Exclude sensitive credentials file
+credentials.json
+
+# Exclude logs and temporary files
+logs/
+*.log
+.tmp/
