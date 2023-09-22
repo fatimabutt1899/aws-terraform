@@ -11,4 +11,8 @@ credentials.json
 # Exclude logs and temporary files
 logs/
 *.log
+<<<<<<< HEAD
 .tmp/
+=======
+.tmp/
+>>>>>>> 368ee0f (IAM user created)
