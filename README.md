@@ -1,2 +1,2 @@
-# aws-IAM-terraform
-creating creating IAM user in aws
+# aws-services-terraform
+creating creating services and resources in aws
