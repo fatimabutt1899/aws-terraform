@@ -1,6 +1,6 @@
 provider "aws" {
   region = "us-west-2"
-  profile = "fatima"
+  profile = "aws-terraform"
 }
 
 # Create elastic beanstalk application
@@ -16,7 +16,7 @@ resource "aws_elastic_beanstalk_environment" "beanstalkappenv" {
   application         = aws_elastic_beanstalk_application.elasticapp.name
   solution_stack_name = var.solution_stack_name
   tier                = var.tier
- 
+  
   setting {
     namespace = "aws:ec2:vpc"
     name      = "VPCId"
@@ -25,8 +25,9 @@ resource "aws_elastic_beanstalk_environment" "beanstalkappenv" {
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name      = "IamInstanceProfile"
-    value     = "fatima"
-    # value     =  "aws-elasticbeanstalk-ec2-role"
+    value     = "aws-elasticbeanstalk-ec2-role"
+    # value = "ElasticBeanstalk-Environment-Role"
+    # value     = "AWSServiceRoleForElasticBeanstalk"
   }
   setting {
     namespace = "aws:ec2:vpc"
